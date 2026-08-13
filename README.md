@@ -499,7 +499,7 @@ which is used as part of the Vercel deployment configuration.
 Replace this with the final deployment URL:
 
 ```text
-https://YOUR-PROJECT-NAME.vercel.app
+https://propacity-frontend-task.vercel.app/
 ```
 
 ---
