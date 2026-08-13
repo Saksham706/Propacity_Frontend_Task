@@ -417,7 +417,7 @@ git --version
 Clone the repository:
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Saksham706/Propacity_Frontend_Task
 ```
 
 Navigate into the project:
@@ -495,8 +495,6 @@ vercel.json
 which is used as part of the Vercel deployment configuration.
 
 ### Live Deployment
-
-Replace this with the final deployment URL:
 
 ```text
 https://propacity-frontend-task.vercel.app/
@@ -649,13 +647,7 @@ Git
 ### Live Website
 
 ```text
-PASTE-YOUR-VERCEL-URL-HERE
-```
-
-### GitHub Repository
-
-```text
-PASTE-YOUR-GITHUB-REPOSITORY-URL-HERE
+https://github.com/Saksham706/Propacity_Frontend_Task/edit/main/README.md
 ```
 
 ---
