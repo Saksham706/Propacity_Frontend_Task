@@ -1,89 +1,93 @@
-# Murec — Premium Real Estate Experience
+# MUREC — Premium Real Estate Experience
 
-A modern, responsive frontend redesign of the **Murec website**, created as part of the **Frontend Developer assignment for Propacity**.
+A modern, responsive frontend redesign of the **MUREC (Madhusudan Urban Real Estate Collection)** website, developed as part of the **Frontend Developer hiring assignment for Propacity**.
 
-The project combines the content and visual identity of Murec with a fresh, premium interface inspired by the design language, typography, spacing, motion, and immersive experience of the Timeless website — while maintaining an original implementation rather than directly reproducing its design.
+The project combines authentic MUREC content with a fresh, premium digital experience inspired by the visual language of the Timeless website. The implementation is original and focuses on immersive visuals, smooth animations, responsive design, reusable React components, and attention to detail.
 
 ---
 
-## ✨ Project Overview
+## 🌐 Live Demo
 
-This project focuses on transforming the existing Murec web experience into a modern, visually engaging and responsive website.
+**Live Website:**
+**`https://propacity-frontend-task.vercel.app/`**
 
-The primary goals were:
+---
+
+## 📌 Project Overview
+
+This project was created for the **Propacity Frontend Developer Assignment**.
+
+The assignment required redesigning a relevant page or section from the MUREC website while taking design inspiration from the Timeless website.
+
+The main objective was to create a completely fresh and modern interface that maintains the original MUREC content while delivering a more immersive, premium, and engaging user experience.
+
+### Primary Goals
 
 * Create a premium and modern visual experience.
-* Preserve the core content and messaging from Murec.
-* Take inspiration from the immersive design language of Timeless.
+* Preserve the relevant MUREC content.
+* Develop an original design inspired by Timeless.
 * Introduce smooth animations and interactions.
-* Maintain excellent usability across desktop, tablet and mobile.
-* Build the interface using reusable React components.
-* Keep the project structure clean and maintainable.
-* Optimize visual assets and animations for a smooth browsing experience.
+* Build a fully responsive experience.
+* Maintain clean and reusable React architecture.
+* Optimize the experience for desktop, tablet, and mobile.
+* Demonstrate attention to typography, spacing, motion, and visual hierarchy.
 
 ---
 
-## 🎯 Assignment Objective
-
-The assignment required the following:
-
-> Redesign a webpage using content from the Murec website while taking design inspiration from the Timeless website.
+## 🎯 Assignment Reference
 
 ### Content Source
 
-Murec
+**MUREC — Madhusudan Urban Real Estate Collection**
+
 https://www.murec.com/
+
+The MUREC website was used as the primary content source for the redesign. The source website contains sections including the MUREC legacy, values, collection, sustainability philosophy, associations, partners, and contact information.
 
 ### Design Inspiration
 
-Timeless
+**Timeless**
+
 https://timeless.club/en
 
-The implementation does **not** attempt to clone the Timeless website. Instead, it uses its premium visual characteristics as inspiration while creating an independent layout, animation system, component structure and user experience.
+The Timeless website was used as visual inspiration for:
+
+* Premium typography
+* Minimal layouts
+* Large visual compositions
+* Spacing
+* Motion
+* Transitions
+* Immersive storytelling
+* Overall visual sophistication
+
+The Timeless website was **not copied or cloned**. The final interface is an independent implementation created specifically for this assignment.
 
 ---
 
-## 🚀 Key Features
+# ✨ Key Features
 
-### Premium Hero Section
+## 1. Premium Hero Experience
 
-* Full-screen visual introduction.
-* High-impact typography.
-* Immersive video/visual background.
-* Smooth entrance animations.
-* Responsive layout across screen sizes.
+The hero section is designed to immediately establish the visual identity of the website.
 
-### Smooth Scroll Experience
+It includes:
 
-* Scroll-based animations.
-* Section transitions.
-* Element reveal effects.
-* Motion synchronized with the user's scrolling.
-* Smooth visual progression between sections.
+* Full-screen visual composition
+* Large typography
+* Video integration
+* Smooth entrance animations
+* Strong visual hierarchy
+* Responsive behavior
+* Immersive presentation
 
-### Interactive Navigation
+---
 
-* Clean and minimal navigation.
-* Responsive navigation behavior.
-* Smooth interaction states.
-* Navigation designed to remain consistent with the premium visual direction.
+## 2. Video-Based Visual Storytelling
 
-### Responsive Design
+The project uses locally hosted video assets to create a more immersive experience.
 
-The website is designed for:
-
-* Desktop
-* Laptop
-* Tablet
-* Mobile
-
-Responsive behavior has been implemented using flexible layouts, responsive typography, spacing adjustments and mobile-specific UI handling.
-
-### Video Integration
-
-The project uses locally hosted video assets for immersive visual sections.
-
-Example assets include:
+Current video assets include:
 
 ```text
 public/
@@ -92,44 +96,113 @@ public/
     └── 02-logo-reveal.mp4
 ```
 
-Local video assets help provide a consistent visual experience without relying entirely on external media sources.
-
-### Reusable React Components
-
-The interface is divided into reusable components and pages rather than placing the entire application inside a single component.
-
-This makes the project easier to:
-
-* Maintain
-* Extend
-* Debug
-* Reuse
-* Scale
-
-### Animation System
-
-GSAP and ScrollTrigger are used for advanced interactions and scroll-based animations.
-
-Animations are designed to enhance the interface without distracting from the content.
+Local video assets provide more predictable rendering during evaluation and allow the visual experience to remain independent of external video hosting.
 
 ---
 
-## 🛠️ Tech Stack
+## 3. GSAP Animations
 
-| Technology         | Purpose                              |
-| ------------------ | ------------------------------------ |
-| React.js           | Frontend UI development              |
-| Vite               | Development server and build tooling |
-| JavaScript         | Application logic                    |
-| CSS3               | Styling and responsive layouts       |
-| GSAP               | Advanced animations                  |
-| GSAP ScrollTrigger | Scroll-based animations              |
-| HTML5              | Semantic page structure              |
-| Vercel             | Deployment                           |
+The website uses **GSAP** for advanced animations and interactions.
+
+The implementation includes scroll-based animation behavior using:
+
+* GSAP
+* ScrollTrigger
+* Timeline-based animations
+* Element reveals
+* Section transitions
+* Scroll-linked motion
+
+Animations are used intentionally to improve the storytelling experience rather than simply adding motion for visual effects.
 
 ---
 
-## 📁 Project Structure
+## 4. Smooth Scroll Experience
+
+The page is designed as a continuous visual journey.
+
+The experience follows a flow similar to:
+
+```text
+Hero
+  ↓
+Brand Introduction
+  ↓
+Legacy
+  ↓
+Values
+  ↓
+Collection
+  ↓
+Sustainability
+  ↓
+Associations
+  ↓
+Partners
+  ↓
+Contact
+```
+
+Each section has its own visual hierarchy while maintaining consistency with the overall design system.
+
+---
+
+## 5. Responsive Design
+
+The website is designed to work across:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Responsive behavior includes:
+
+* Flexible layouts
+* Responsive typography
+* Adaptive spacing
+* Mobile-friendly navigation
+* Responsive videos
+* Flexible content positioning
+* Prevention of horizontal overflow
+
+The mobile experience is not simply a scaled-down desktop layout. Components and spacing are adjusted to maintain usability on smaller screens.
+
+---
+
+## 6. Reusable React Components
+
+The application follows a component-based React architecture.
+
+Major interface sections are separated into reusable components to improve:
+
+* Maintainability
+* Readability
+* Reusability
+* Scalability
+* Debugging
+
+This approach also makes it easier to modify individual sections without affecting the rest of the application.
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology         | Purpose                            |
+| ------------------ | ---------------------------------- |
+| React.js           | Frontend application               |
+| Vite               | Development and production tooling |
+| JavaScript         | Application logic                  |
+| HTML5              | Semantic structure                 |
+| CSS3               | Styling and responsive layouts     |
+| GSAP               | Animation engine                   |
+| GSAP ScrollTrigger | Scroll-based animations            |
+| Git                | Version control                    |
+| Vercel             | Deployment                         |
+
+---
+
+# 📁 Project Structure
 
 ```text
 frontend/
@@ -168,176 +241,186 @@ frontend/
 
 ---
 
-## 🧩 Architecture
+# 🧩 Project Architecture
 
-The application follows a component-based React architecture.
+The project is structured around reusable React components and page-level compositions.
 
-### `src/components`
+## `src/components`
 
-Contains reusable UI sections and interface components.
+Contains reusable UI sections and components.
 
-Examples can include:
+Examples include:
 
-* Navbar
+* Navigation
 * Hero
+* Legacy section
 * Content sections
 * Animation sections
 * Footer
-* Other reusable UI elements
-
-### `src/pages`
-
-Contains page-level sections and compositions.
-
-This separation helps keep the application modular and makes individual sections easier to maintain.
-
-### `src/data`
-
-Contains structured content/data used by the UI.
-
-Keeping content separate from presentation makes it easier to update website information without modifying the component logic.
-
-### `public/videos`
-
-Contains locally hosted video assets used by the website.
+* Other reusable interface elements
 
 ---
 
-## 🎨 Design Approach
+## `src/pages`
 
-The design direction was based on three primary principles:
+Contains page-level compositions and larger website sections.
 
-### 1. Minimalism
-
-The interface avoids unnecessary UI elements and focuses attention on the primary content.
-
-### 2. Visual Storytelling
-
-Large typography, imagery, video and motion are used to guide users through the page.
-
-### 3. Motion With Purpose
-
-Animations are used to:
-
-* Establish hierarchy.
-* Reveal content.
-* Create visual continuity.
-* Improve perceived interaction quality.
-* Make scrolling feel more immersive.
-
-The goal was not simply to add animations, but to make motion part of the overall storytelling experience.
+Separating pages from reusable components keeps the application easier to understand and maintain.
 
 ---
 
-## ⚡ Performance Considerations
+## `src/data`
 
-Several considerations were taken into account while developing the website:
+Contains structured content used by the application.
 
-* Reusable React components.
-* Local asset organization.
-* Avoidance of unnecessary component duplication.
-* Efficient animation handling with GSAP.
-* Scroll-triggered animations instead of continuously running animations where possible.
-* Responsive media handling.
-* Production build optimization through Vite.
-
-Large visual assets such as videos should be compressed and optimized appropriately for production environments.
+Separating content from presentation makes it easier to modify website content without changing the underlying component logic.
 
 ---
 
-## 📱 Responsive Strategy
+## `public/videos`
 
-The layout was designed with a responsive-first mindset.
-
-### Desktop
-
-The desktop experience focuses on:
-
-* Large visual compositions.
-* Full-width sections.
-* Large typography.
-* Immersive animations.
-* Horizontal spacing and visual depth.
-
-### Tablet
-
-The tablet layout adjusts:
-
-* Typography scale.
-* Section spacing.
-* Navigation behavior.
-* Media sizing.
-* Content positioning.
-
-### Mobile
-
-The mobile experience prioritizes:
-
-* Readability.
-* Touch-friendly interactions.
-* Simplified layouts.
-* Proper video scaling.
-* Reduced spacing where necessary.
-* Preventing horizontal overflow.
-
-The objective is to maintain the same visual identity without simply shrinking the desktop layout.
+Contains the video assets used by the immersive visual sections.
 
 ---
 
-## 🎬 Animation Philosophy
+# 🎨 Design Philosophy
 
-GSAP was selected because the project requires precise control over animations and scroll-based interactions.
+The design was developed around three core principles.
 
-Animations are primarily used for:
+## Minimalism
+
+The interface avoids unnecessary visual elements and allows the main content, typography, imagery, and motion to remain the focus.
+
+## Visual Storytelling
+
+Large typography, video, spacing, and transitions are used to guide the user through the MUREC story.
+
+## Purposeful Motion
+
+Animations are not added simply for decoration.
+
+Motion is used to:
+
+* Establish hierarchy
+* Reveal information
+* Guide attention
+* Connect sections
+* Improve transitions
+* Create a premium browsing experience
+
+---
+
+# 🎬 Animation Approach
+
+GSAP was selected because it provides precise control over complex animations and scroll interactions.
+
+The general animation flow is:
 
 ```text
 Page Load
     ↓
-Hero Introduction
+Initial Hero Animation
     ↓
 Scroll Interaction
     ↓
 Content Reveal
     ↓
-Section Transition
+Section Animation
     ↓
-Visual Storytelling
+Visual Transition
 ```
 
-`ScrollTrigger` allows animation timelines to respond naturally to the user's scroll position.
+GSAP ScrollTrigger is used to synchronize selected animations with the user's scroll position.
 
-The animation approach prioritizes smoothness and visual consistency rather than excessive motion.
+The animation system is designed to maintain a balance between visual impact and usability.
 
 ---
 
-## 💻 Getting Started
+# 📱 Responsive Strategy
 
-### Prerequisites
+## Desktop
 
-Make sure the following are installed:
+The desktop experience focuses on:
+
+* Large typography
+* Full-width visual sections
+* Immersive video
+* Generous spacing
+* Scroll-based animation
+* Strong visual compositions
+
+## Tablet
+
+The tablet experience adapts:
+
+* Typography scale
+* Section spacing
+* Media dimensions
+* Navigation
+* Content positioning
+
+## Mobile
+
+The mobile experience prioritizes:
+
+* Readability
+* Touch-friendly interaction
+* Proper content hierarchy
+* Responsive videos
+* Simplified layouts
+* Reduced unnecessary spacing
+* Prevention of horizontal scrolling
+
+---
+
+# ⚡ Performance Considerations
+
+Performance was considered throughout the implementation.
+
+Key considerations include:
+
+* Component reuse
+* Vite production builds
+* Controlled GSAP animations
+* Scroll-triggered animations
+* Local media organization
+* Avoiding unnecessary duplication
+* Responsive media handling
+* Production asset optimization
+
+Large video assets can be further compressed or served in adaptive formats for a production-scale deployment.
+
+---
+
+# 💻 Getting Started
+
+## Prerequisites
+
+Make sure you have the following installed:
 
 * Node.js
 * npm
 * Git
 
-You can verify your Node.js and npm installations with:
+Verify your installation:
 
 ```bash
 node -v
 npm -v
+git --version
 ```
 
 ---
 
-## 📦 Installation
+# 📦 Installation
 
 Clone the repository:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone <YOUR_GITHUB_REPOSITORY_URL>
 ```
 
-Navigate into the frontend directory:
+Navigate into the project:
 
 ```bash
 cd frontend
@@ -351,15 +434,15 @@ npm install
 
 ---
 
-## ▶️ Run the Development Server
+# ▶️ Development
 
-Start the development server:
+Start the Vite development server:
 
 ```bash
 npm run dev
 ```
 
-Vite will provide a local development URL, normally similar to:
+The application will normally be available at:
 
 ```text
 http://localhost:5173
@@ -369,15 +452,15 @@ Open the URL in your browser.
 
 ---
 
-## 🏗️ Production Build
+# 🏗️ Production Build
 
-To create an optimized production build:
+Create the production build:
 
 ```bash
 npm run build
 ```
 
-To preview the production build locally:
+Preview the production build locally:
 
 ```bash
 npm run preview
@@ -385,230 +468,224 @@ npm run preview
 
 ---
 
-## 🔍 Code Quality
+# 🌐 Deployment
 
-The project follows a modular structure intended to keep responsibilities separated.
+The project is configured for deployment through **Vercel**.
 
-Key practices include:
-
-* Functional React components.
-* Reusable UI components.
-* Separate styling files where appropriate.
-* Clear component responsibilities.
-* Meaningful naming conventions.
-* Minimal unnecessary duplication.
-* Animation logic isolated within relevant components.
-* ESLint configuration for maintaining code quality.
-
----
-
-## 🌐 Deployment
-
-The project is configured for deployment using Vercel.
-
-### Build Command
+## Build Command
 
 ```bash
 npm run build
 ```
 
-### Output Directory
+## Output Directory
 
 ```text
 dist
 ```
 
-### Vercel Configuration
+## Deployment Configuration
 
-The project includes:
+The repository contains:
 
 ```text
 vercel.json
 ```
 
-This configuration is used to support the deployment setup.
+which is used as part of the Vercel deployment configuration.
 
-### Live Website
+### Live Deployment
 
-**Live Demo:**
-`<YOUR_VERCEL_DEPLOYMENT_URL>`
-
-### Repository
-
-**GitHub Repository:**
-`<YOUR_GITHUB_REPOSITORY_URL>`
-
-> Replace the placeholders above with the final deployment and repository links before submitting the assignment.
-
----
-
-## 🖼️ Project Highlights
-
-The project focuses on delivering:
-
-* Premium visual hierarchy
-* Immersive hero experience
-* Modern typography
-* Smooth scrolling
-* GSAP-powered animations
-* Video-based visual storytelling
-* Responsive layouts
-* Modular React architecture
-* Clean and maintainable code
-* Mobile-friendly experience
-
----
-
-## 🔐 Content & Design Attribution
-
-The project was created specifically for the Propacity frontend evaluation assignment.
-
-### Content Reference
-
-Murec content was used as the primary content source as requested in the assignment.
-
-### Design Inspiration
-
-The visual direction was inspired by the Timeless website.
-
-The implementation is an original frontend design and does not attempt to reproduce the Timeless website pixel-for-pixel.
-
----
-
-## 🧠 Design Decisions
-
-### Why React?
-
-React provides a component-based architecture that makes the interface easier to organize, reuse and maintain.
-
-### Why Vite?
-
-Vite provides a fast development experience and an efficient production build pipeline for modern React applications.
-
-### Why GSAP?
-
-GSAP provides precise control over complex animations and allows animation timelines to be synchronized with scrolling through ScrollTrigger.
-
-### Why Local Video Assets?
-
-Using local video assets provides predictable rendering and avoids depending on third-party video hosting during the evaluation.
-
-### Why Component-Based Sections?
-
-Breaking the interface into individual sections makes it easier to:
-
-* Modify individual parts.
-* Reuse components.
-* Maintain animation logic.
-* Improve readability.
-* Scale the application.
-
----
-
-## 📊 Evaluation Criteria Coverage
-
-| Evaluation Area     | Implementation                                            |
-| ------------------- | --------------------------------------------------------- |
-| UI/UX               | Premium visual hierarchy and modern layout                |
-| Visual Design       | Original design inspired by Timeless                      |
-| Responsiveness      | Desktop, tablet and mobile layouts                        |
-| Code Quality        | Modular React architecture                                |
-| Performance         | Optimized Vite production build and controlled animations |
-| Attention to Detail | Typography, spacing, transitions and interactions         |
-| Creativity          | Original interpretation of the reference design           |
-| Usability           | Responsive and accessible interaction patterns            |
-
----
-
-## 🔮 Future Improvements
-
-If this project were extended beyond the assignment, the following improvements could be added:
-
-* Advanced page transitions.
-* More interactive 3D visual elements.
-* Improved image lazy loading.
-* Further video compression and adaptive video loading.
-* Accessibility audit and WCAG improvements.
-* Automated Lighthouse performance optimization.
-* Additional responsive breakpoints.
-* CMS-driven content management.
-* More detailed micro-interactions.
-* Analytics and user interaction tracking.
-
----
-
-## 📌 Important Notes
-
-This project was developed as a frontend-focused implementation.
-
-The primary focus was on:
+Replace this with the final deployment URL:
 
 ```text
-Design
-   +
-React Architecture
-   +
-Responsive Development
-   +
-Animation
-   +
-Performance
-   +
-User Experience
+https://YOUR-PROJECT-NAME.vercel.app
 ```
-
-The application does not require a separate backend for the core frontend experience.
 
 ---
 
-## 👨‍💻 Developer
+# 🔍 Code Quality
 
-**Saksham Agarwal**
+The project follows a modular component-based structure.
 
-Frontend / Full-Stack Developer
+Development practices include:
 
-### Core Technologies
+* Functional React components
+* Reusable components
+* Separation of content and UI
+* Meaningful naming
+* Modular CSS
+* Isolated animation logic
+* ESLint configuration
+* Minimal unnecessary duplication
+* Clear component responsibilities
+
+---
+
+# 📊 Assignment Evaluation Coverage
+
+| Evaluation Criteria | Implementation                                      |
+| ------------------- | --------------------------------------------------- |
+| UI/UX               | Premium visual hierarchy and immersive interactions |
+| Visual Design       | Original MUREC redesign inspired by Timeless        |
+| Responsive Design   | Desktop, tablet and mobile support                  |
+| Code Quality        | Modular React component architecture                |
+| Performance         | Vite build optimization and controlled animations   |
+| Attention to Detail | Typography, spacing, transitions and motion         |
+| Creativity          | Original visual interpretation                      |
+| Usability           | Responsive and intuitive interface                  |
+
+---
+
+# 🧠 Technical Decisions
+
+## Why React?
+
+React provides a component-based architecture that makes the website modular, reusable, and easier to maintain.
+
+## Why Vite?
+
+Vite provides fast development startup and an efficient production build process for modern React applications.
+
+## Why GSAP?
+
+GSAP provides precise control over animation timelines and complex interactions.
+
+## Why ScrollTrigger?
+
+ScrollTrigger allows animations to respond directly to the user's scroll position, making it suitable for the immersive storytelling approach used in this project.
+
+## Why Local Video Assets?
+
+Local video assets provide consistent media availability during evaluation and reduce dependency on external media hosting.
+
+## Why Component-Based Architecture?
+
+Breaking the interface into smaller components makes the code easier to:
+
+* Maintain
+* Debug
+* Reuse
+* Extend
+* Scale
+
+---
+
+# 🔮 Future Improvements
+
+If this project were developed beyond the assignment, possible improvements would include:
+
+* Advanced page transitions
+* More complex interactive animations
+* Adaptive video loading
+* Further image optimization
+* Lazy loading for visual assets
+* Lighthouse-based performance optimization
+* Accessibility audit
+* WCAG improvements
+* CMS-driven content
+* Additional micro-interactions
+* Analytics integration
+* SEO improvements
+* Progressive image loading
+
+---
+
+# 📌 Content Attribution
+
+This project was developed specifically for the **Propacity Frontend Developer hiring assignment**.
+
+The MUREC website was used as the primary content reference as requested in the assignment. The original MUREC site describes its legacy, values, collection, sustainability philosophy, associations, partners, and contact information.
+
+The Timeless website was used only as a design inspiration/reference.
+
+The final implementation is an original frontend design and is not intended to be a pixel-perfect recreation of the Timeless website.
+
+---
+
+# 👨‍💻 Developer
+
+## Saksham Agarwal
+
+**Frontend / Full-Stack Developer**
+
+### Technologies
 
 ```text
 React.js
 JavaScript
 HTML5
 CSS3
+GSAP
 Node.js
 Express.js
 MongoDB
-GSAP
-Git
 Vite
+Git
 ```
 
 ---
 
-## 📬 Assignment Submission
+# 📬 Assignment Submission
 
-Prepared for:
+### Submitted For
 
 **Propacity — Frontend Developer Hiring Assignment**
 
-Assignment focus:
+### Assignment
 
-> Murec content + Timeless-inspired premium frontend experience
+**MUREC Website Redesign**
 
-Submission includes:
+### Deliverables
 
 * React source code
 * Responsive frontend implementation
-* Animation and interaction system
+* GSAP animations
+* Scroll-based interactions
 * Video assets
 * Vercel deployment configuration
 * Project documentation
 
+### Live Website
+
+```text
+PASTE-YOUR-VERCEL-URL-HERE
+```
+
+### GitHub Repository
+
+```text
+PASTE-YOUR-GITHUB-REPOSITORY-URL-HERE
+```
+
 ---
 
-## ⭐ Final Note
+# ⭐ Final Note
 
-This project was built with the goal of demonstrating not only frontend implementation skills, but also the ability to translate a design direction into a polished, responsive and maintainable user experience.
+This project was built to demonstrate the ability to transform an existing brand/content direction into a polished and modern digital experience.
 
-The emphasis was placed on **visual quality, interaction design, responsive behavior, reusable architecture and attention to detail** while keeping the implementation original.
+The implementation focuses on:
+
+```text
+Visual Design
+      +
+React Architecture
+      +
+Responsive Development
+      +
+Animation
+      +
+Performance
+      +
+User Experience
+      +
+Attention to Detail
+```
+
+The primary objective was to create a website that feels **premium, immersive, responsive, and maintainable**, while preserving the core MUREC content and developing an original visual interpretation inspired by the Timeless design language.
 
 ---
+
+## License
+
+This project was created for the **Propacity Frontend Developer hiring assignment** and is intended for evaluation purposes.
