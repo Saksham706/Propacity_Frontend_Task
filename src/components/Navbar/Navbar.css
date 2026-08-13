@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap");
+
+:root {
+  --murec-black: #0b0b0a;
+  --murec-black-soft: rgba(11, 11, 10, 0.82);
+  --murec-ivory: #e8e2d7;
+  --murec-muted: rgba(232, 226, 215, 0.58);
+  --murec-line: rgba(232, 226, 215, 0.16);
+  --murec-bronze: #a78b68;
+  --murec-transition: 700ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 94px;
+  z-index: 1000;
+  color: var(--murec-ivory);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    height 700ms cubic-bezier(0.77, 0, 0.18, 1),
+    background 700ms cubic-bezier(0.77, 0, 0.18, 1),
+    border-color 700ms cubic-bezier(0.77, 0, 0.18, 1),
+    backdrop-filter 700ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-navbar-scrolled {
+  height: 76px;
+  background: rgba(10, 10, 9, 0.78);
+  border-bottom-color: var(--murec-line);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.murec-navbar-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.murec-navbar-left,
+.murec-navbar-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.murec-navbar-left {
+  left: 142px;
+}
+
+.murec-navbar-right {
+  right: 142px;
+}
+
+.murec-navbar-left button,
+.murec-navbar-right button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--murec-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color 400ms ease,
+    opacity 400ms ease;
+}
+
+.murec-navbar-left button::after,
+.murec-navbar-right button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 1px;
+  background: var(--murec-ivory);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 500ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-navbar-left button:hover,
+.murec-navbar-right button:hover {
+  color: var(--murec-ivory);
+}
+
+.murec-navbar-left button:hover::after,
+.murec-navbar-right button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.murec-navbar-left button span,
+.murec-navbar-right button span {
+  color: var(--murec-bronze);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.murec-navbar-logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 120px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--murec-ivory);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.murec-logo-main {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 0.8;
+  padding-left: 0.18em;
+  transition:
+    color 400ms ease,
+    letter-spacing 500ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-logo-sub {
+  display: block;
+  color: var(--murec-bronze);
+  font-family: "Inter", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  letter-spacing: 0.38em;
+  line-height: 1;
+  padding-left: 0.38em;
+  opacity: 0.9;
+}
+
+.murec-navbar-logo:hover .murec-logo-main {
+  color: #fff;
+  letter-spacing: 0.25em;
+}
+
+.murec-menu-button {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--murec-line);
+  border-radius: 50%;
+  outline: none;
+  transform: translateY(-50%);
+  background: rgba(10, 10, 9, 0.05);
+  cursor: pointer;
+  z-index: 5;
+  transition:
+    background 500ms ease,
+    border-color 500ms ease,
+    transform 500ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-menu-button:hover {
+  border-color: rgba(232, 226, 215, 0.42);
+  background: rgba(232, 226, 215, 0.06);
+}
+
+.murec-menu-button span {
+  position: absolute;
+  left: 11px;
+  width: 14px;
+  height: 1px;
+  background: var(--murec-ivory);
+  transition:
+    transform 600ms cubic-bezier(0.77, 0, 0.18, 1),
+    width 500ms ease;
+}
+
+.murec-menu-button span:first-child {
+  top: 15px;
+}
+
+.murec-menu-button span:last-child {
+  top: 21px;
+}
+
+.murec-menu-active {
+  border-color: rgba(232, 226, 215, 0.3);
+}
+
+.murec-menu-active span:first-child {
+  top: 18px;
+  transform: rotate(45deg);
+}
+
+.murec-menu-active span:last-child {
+  top: 18px;
+  transform: rotate(-45deg);
+}
+
+.murec-navbar-status {
+  position: absolute;
+  right: 42px;
+  bottom: -24px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  opacity: 0.55;
+  transition: opacity 400ms ease;
+}
+
+.murec-navbar-status span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--murec-bronze);
+}
+
+.murec-navbar-status p {
+  margin: 0;
+  color: var(--murec-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.murec-navbar-scrolled .murec-navbar-status {
+  opacity: 0;
+}
+
+.murec-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  visibility: hidden;
+  pointer-events: none;
+  color: var(--murec-ivory);
+}
+
+.murec-mobile-menu-background {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(167, 139, 104, 0.08),
+      transparent 28%
+    ),
+    #0b0b0a;
+  transform: translateY(-100%);
+  transition: transform 900ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-mobile-menu-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 120px 8vw 45px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 500ms ease 150ms,
+    transform 800ms cubic-bezier(0.77, 0, 0.18, 1) 100ms;
+}
+
+.murec-mobile-menu-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.murec-mobile-menu-open .murec-mobile-menu-background {
+  transform: translateY(0);
+}
+
+.murec-mobile-menu-open .murec-mobile-menu-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.murec-mobile-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--murec-line);
+  color: var(--murec-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.murec-mobile-navigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7vh;
+}
+
+.murec-mobile-navigation button {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: baseline;
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid var(--murec-line);
+  outline: none;
+  background: transparent;
+  color: var(--murec-ivory);
+  text-align: left;
+  cursor: pointer;
+  transition: padding-left 500ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.murec-mobile-navigation button:hover {
+  padding-left: 15px;
+}
+
+.murec-mobile-navigation button span {
+  color: var(--murec-bronze);
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+}
+
+.murec-mobile-navigation button strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(36px, 7vw, 62px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+
+.murec-mobile-menu-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 30px;
+  align-items: end;
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px solid var(--murec-line);
+}
+
+.murec-mobile-menu-bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.murec-mobile-menu-bottom span {
+  color: var(--murec-bronze);
+  font-family: "Inter", sans-serif;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+}
+
+.murec-mobile-menu-bottom p {
+  margin: 0;
+  color: var(--murec-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.murec-mobile-menu-mark {
+  color: var(--murec-muted);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 1100px) {
+  .murec-navbar-left {
+    left: 120px;
+  }
+
+  .murec-navbar-right {
+    right: 120px;
+  }
+
+  .murec-navbar-left,
+  .murec-navbar-right {
+    gap: 26px;
+  }
+
+  .murec-menu-button {
+    left: 32px;
+  }
+
+  .murec-navbar-container {
+    padding: 0 32px;
+  }
+
+  .murec-navbar-status {
+    right: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .murec-navbar {
+    height: 78px;
+  }
+
+  .murec-navbar-scrolled {
+    height: 68px;
+  }
+
+  .murec-navbar-container {
+    padding: 0 24px;
+  }
+
+  .murec-navbar-left,
+  .murec-navbar-right,
+  .murec-navbar-status {
+    display: none;
+  }
+
+  .murec-menu-button {
+    left: 24px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .murec-logo-main {
+    font-size: 27px;
+  }
+
+  .murec-logo-sub {
+    font-size: 5px;
+  }
+
+  .murec-mobile-menu-inner {
+    padding: 105px 24px 30px;
+  }
+
+  .murec-mobile-navigation {
+    margin-top: 5vh;
+  }
+
+  .murec-mobile-navigation button {
+    grid-template-columns: 35px 1fr;
+    padding: 11px 0;
+  }
+
+  .murec-mobile-navigation button strong {
+    font-size: clamp(34px, 11vw, 52px);
+  }
+
+  .murec-mobile-menu-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .murec-mobile-menu-mark {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .murec-navbar {
+    height: 72px;
+  }
+
+  .murec-navbar-container {
+    padding: 0 18px;
+  }
+
+  .murec-menu-button {
+    left: 18px;
+  }
+
+  .murec-logo-main {
+    font-size: 25px;
+  }
+
+  .murec-mobile-menu-inner {
+    padding: 95px 20px 25px;
+  }
+
+  .murec-mobile-menu-top {
+    font-size: 7px;
+  }
+
+  .murec-mobile-navigation {
+    margin-top: 4vh;
+  }
+
+  .murec-mobile-navigation button {
+    grid-template-columns: 30px 1fr;
+    padding: 10px 0;
+  }
+
+  .murec-mobile-navigation button strong {
+    font-size: 37px;
+  }
+
+  .murec-mobile-menu-bottom {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .murec-navbar,
+  .murec-navbar-left button,
+  .murec-navbar-right button,
+  .murec-navbar-logo,
+  .murec-logo-main,
+  .murec-menu-button,
+  .murec-menu-button span,
+  .murec-mobile-menu-background,
+  .murec-mobile-menu-inner,
+  .murec-mobile-navigation button {
+    transition: none;
+  }
+}

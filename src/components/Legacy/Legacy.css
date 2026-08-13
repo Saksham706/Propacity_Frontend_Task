@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap");
+
+:root {
+  --legacy-white: #eeeae2;
+  --legacy-muted: rgba(238, 234, 226, 0.62);
+  --legacy-line: rgba(238, 234, 226, 0.18);
+  --legacy-bronze: #ad8860;
+  --legacy-black: #070706;
+}
+
+.legacy {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 680px;
+  overflow: hidden;
+  background: var(--legacy-black);
+  isolation: isolate;
+}
+
+.legacy-media-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -6;
+}
+
+.legacy-media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: translate(-50%, -50%) scale(1.12);
+  will-change: transform;
+}
+
+.legacy-image-layer {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 4, 3, 0.45) 0%,
+      transparent 35%,
+      transparent 65%,
+      rgba(4, 4, 3, 0.4) 100%
+    );
+}
+
+.legacy-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.1) 28%,
+      rgba(0, 0, 0, 0.08) 55%,
+      rgba(0, 0, 0, 0.74) 100%
+    );
+}
+
+.legacy-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 18%,
+      rgba(0, 0, 0, 0.14) 52%,
+      rgba(0, 0, 0, 0.58) 100%
+    );
+  opacity: 0.55;
+}
+
+.legacy-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(80vw, 1000px);
+  height: min(80vw, 1000px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.legacy-watermark span {
+  color: transparent;
+  font-family: "Cormorant Garamond", serif;
+  font-size: min(62vw, 850px);
+  font-weight: 300;
+  line-height: 0.7;
+  -webkit-text-stroke: 1px rgba(238, 234, 226, 0.22);
+  text-stroke: 1px rgba(238, 234, 226, 0.22);
+}
+
+.legacy-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 30px 90px;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.legacy-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 28px;
+  color: var(--legacy-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.legacy-eyebrow-line {
+  width: 34px;
+  height: 1px;
+  background: var(--legacy-bronze);
+}
+
+.legacy-title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--legacy-white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px, 7.5vw, 135px);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 0.75;
+  text-transform: uppercase;
+}
+
+.legacy-title-mask {
+  display: block;
+  overflow: hidden;
+  padding: 0 12px 9px;
+}
+
+.legacy-title-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.legacy-title-emphasis {
+  color: rgba(238, 234, 226, 0.88);
+  font-size: 0.84em;
+  letter-spacing: 0;
+}
+
+.legacy-description {
+  max-width: 480px;
+  margin: 35px 0 0;
+  color: var(--legacy-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.055em;
+  line-height: 1.9;
+}
+
+.legacy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 33px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--legacy-white);
+  cursor: pointer;
+}
+
+.legacy-button > span:first-child {
+  position: relative;
+  padding-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0.27em;
+}
+
+.legacy-button > span:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(238, 234, 226, 0.55);
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 500ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.legacy-button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--legacy-line);
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 300;
+  transition:
+    transform 500ms cubic-bezier(0.77, 0, 0.18, 1),
+    border-color 400ms ease,
+    background 400ms ease;
+}
+
+.legacy-button:hover > span:first-child::after {
+  transform: scaleX(0);
+}
+
+.legacy-button:hover .legacy-button-arrow {
+  transform: rotate(45deg);
+  border-color: rgba(238, 234, 226, 0.65);
+  background: rgba(238, 234, 226, 0.07);
+}
+
+.legacy-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  transform: translateX(-50%);
+  color: var(--legacy-muted);
+  pointer-events: none;
+}
+
+.legacy-scroll-text {
+  font-family: "Inter", sans-serif;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+}
+
+.legacy-scroll-track {
+  position: relative;
+  width: 1px;
+  height: 42px;
+  overflow: hidden;
+  background: rgba(238, 234, 226, 0.18);
+}
+
+.legacy-scroll-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 14px;
+  background: var(--legacy-white);
+  animation: legacyScroll 2.3s ease-in-out infinite;
+}
+
+@keyframes legacyScroll {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(48px);
+    opacity: 0;
+  }
+}
+
+.legacy-index {
+  position: absolute;
+  right: 42px;
+  bottom: 38px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(238, 234, 226, 0.45);
+  font-family: "Inter", sans-serif;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+}
+
+.legacy-index span:first-child {
+  color: var(--legacy-bronze);
+}
+
+@media (max-width: 1100px) {
+  .legacy-title {
+    font-size: clamp(58px, 9vw, 105px);
+  }
+
+  .legacy-watermark span {
+    font-size: 65vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .legacy {
+    min-height: 650px;
+  }
+
+  .legacy-media {
+    object-position: center center;
+  }
+
+  .legacy-content {
+    padding: 100px 24px 80px;
+  }
+
+  .legacy-eyebrow {
+    margin-bottom: 23px;
+    font-size: 6px;
+    letter-spacing: 0.25em;
+  }
+
+  .legacy-title {
+    font-size: clamp(47px, 12.5vw, 76px);
+    line-height: 0.79;
+  }
+
+  .legacy-title-mask {
+    padding: 0 5px 7px;
+  }
+
+  .legacy-description {
+    max-width: 350px;
+    margin-top: 27px;
+    font-size: 9px;
+    line-height: 1.85;
+  }
+
+  .legacy-button {
+    margin-top: 28px;
+  }
+
+  .legacy-watermark span {
+    font-size: 85vw;
+  }
+
+  .legacy-index {
+    right: 24px;
+    bottom: 28px;
+  }
+
+  .legacy-scroll {
+    bottom: 27px;
+  }
+}
+
+@media (max-width: 520px) {
+  .legacy {
+    min-height: 600px;
+  }
+
+  .legacy-content {
+    padding: 90px 18px 75px;
+  }
+
+  .legacy-eyebrow {
+    gap: 9px;
+    margin-bottom: 20px;
+    font-size: 5.5px;
+    letter-spacing: 0.2em;
+  }
+
+  .legacy-eyebrow-line {
+    width: 25px;
+  }
+
+  .legacy-title {
+    font-size: clamp(40px, 13.5vw, 62px);
+  }
+
+  .legacy-title-emphasis {
+    font-size: 0.82em;
+  }
+
+  .legacy-description {
+    max-width: 290px;
+    margin-top: 22px;
+    font-size: 8px;
+    line-height: 1.8;
+  }
+
+  .legacy-button {
+    margin-top: 24px;
+  }
+
+  .legacy-button > span:first-child {
+    font-size: 7px;
+  }
+
+  .legacy-button-arrow {
+    width: 31px;
+    height: 31px;
+  }
+
+  .legacy-scroll {
+    bottom: 19px;
+  }
+
+  .legacy-scroll-text {
+    font-size: 5.5px;
+  }
+
+  .legacy-index {
+    display: none;
+  }
+
+  .legacy-watermark {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .legacy-watermark span {
+    font-size: 105vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .legacy-scroll-line {
+    animation: none;
+  }
+
+  .legacy-media {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
